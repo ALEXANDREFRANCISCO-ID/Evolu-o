@@ -1,0 +1,58 @@
+class="class="""
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            max-width: 400px;
+            margin: 0 auto;
+            
+        }
+        h1{
+            Text-align:center;
+        }
+        footer {
+            Background:#ff808a;
+            Text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evolução individual. </h1>
+    <canvas id="myChart"></canvas>
+
+    <script>
+        // Dados do gráfico
+        var data = {
+            labels: ['Barra 1', 'Barra 2', 'Barra 3', 'Barra 4', 'Barra 5', 'Barra 6', 'Barra 7', 'Barra 8', 'Barra 9', 'Barra 10'],
+            datasets: [{
+                label: 'Valores',
+                data: [80, 60, 40, 70, 90, 50, 30, 75, 55, 85],
+                backgroundColor: '#ff1515',
+            }]
+        };
+
+        // Configurações do gráfico
+        var options = {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Criação do gráfico de barras
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+    </script>
+    </br>
+    </br>
+    <footer>codeATOES</footer>
+</body>
+</html>
