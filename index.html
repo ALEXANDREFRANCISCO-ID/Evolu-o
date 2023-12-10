@@ -1,12 +1,17 @@
-class="class="""
+
 <!DOCTYPE html>
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        canvas {
+        Body 
+        {
+            TEXT-ALIGN:CENTER;
+            Margin: 20px;
+        }
+        Svg {
             max-width: 400px;
-            margin: 0 auto;
+            margin: 300px;
             
         }
         h1{
@@ -16,18 +21,163 @@ class="class="""
             Background:#ff808a;
             Text-align:center;
         }
+         #meu-header{
+      background-image: url('background.png');
+      background-size:cover;
+    
+      Width:100%;
+      height:500px;
+      Text-align:center;
+      
+    }
+    footer{
+        Width:100%;
+        Height:100px;
+    }
+   .tabela{
+        Padding:15px;
+        Background:#fff4d5;
+    }
     </style>
 </head>
 <body>
-    <h1>Evolução individual. </h1>
+    
+    
+    
+
+
+   
+  <header id="meu-header">CODEATOES, NA CASA DE CURSO ONLINE </header>
+
+  <script>
+    var imagens = [
+      { url: "carla.png", texto: "Estude com o conforto da sua casa " },
+      { url: "livro.png", texto: "Temos centenas de livros que oferecemos a um preço baixo " },
+      { url: "tutor.png", texto: "Fale com tutor se tiver dúvidas" },
+      { url: "certificado.png", texto: "Oferecemos certificado de conclusão " },
+      { url: "Actividades.png", texto: "As actividades são práticas " }
+    ];
+    var indice = 0;
+
+    function trocarImagem() {
+      var header = document.getElementById("meu-header");
+      var imagemAtual = imagens[indice];
+
+      header.style.backgroundImage = "url('" + imagemAtual.url + "')";
+      header.textContent = imagemAtual.texto;
+
+      indice++;
+      if (indice >= imagens.length) {
+        indice = 0;
+      }
+    }
+
+    setInterval(trocarImagem, 5000); // Troca a cada 5 segundos (2000 milissegundos)
+  </script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="tabela">
+    <h1>NOME DE ESTUDANTES </h1>
+    <table border="10px" bordercolor="gray" cellpadding="5px">
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Número </th>
+      <th>Nome do estudante </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td> Nálio Naftal Salomão Nhavotso.
+ </td>
+    </tr>
+    
+    
+    <tr>
+      <td>2</td>
+      <td>   SALVADO BAMOSSE </td>
+    </tr>
+    
+    <tr>
+      <td>3</td>
+      <td>Domingos Muemed</td>
+    </tr>
+    
+    <tr>
+      <td>4</td>
+      <td>Nhympine Samuel Muleia</td>
+    </tr>
+    
+    <tr>
+      <td>5</td>
+      <td>Alberto Adelino Domingos</td>
+    </tr>
+    
+    <tr>
+      <td>6</td>
+      <td> Costa José Alicete></td>
+    </tr>
+    
+    <tr>
+      <td>7</td>
+      <td>   Aniceto Andrade Marçalo  </td>
+    </tr>
+    
+    
+    <tr>
+      <td>8</td>
+      <td>
+Félix Francisco Gove</td>
+    </tr>
+    
+    <tr>
+      <td>9</td>
+      <td>
+
+Atanásio Pedro Muando</td>
+    </tr>
+    
+    <tr>
+      <td>10</td>
+      <td>Briston bronze</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>Evolução semanal do estudante . </h1>
     <canvas id="myChart"></canvas>
 
     <script>
         // Dados do gráfico
         var data = {
-            labels: ['Barra 1', 'Barra 2', 'Barra 3', 'Barra 4', 'Barra 5', 'Barra 6', 'Barra 7', 'Barra 8', 'Barra 9', 'Barra 10'],
+            labels: ['Briston', 'Atanasio', 'Félix', 'Aniceto', 'Costa', 'Alberto', 'Nhympine', 'Domingos', 'SALVADO', 'Nálio'],
             datasets: [{
-                label: 'Valores',
+                label: ' evolução semanal',
                 data: [80, 60, 40, 70, 90, 50, 30, 75, 55, 85],
                 backgroundColor: '#ff1515',
             }]
